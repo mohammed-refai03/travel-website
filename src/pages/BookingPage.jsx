@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import packages from "../data/Packages";
+import packages from "../data/ackages";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
