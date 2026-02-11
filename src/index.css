@@ -1,0 +1,154 @@
+:root{
+    --bg-light:#cbcaca3c;
+}
+
+.btn{
+    background-color: #FFD600;
+    color: #000;
+    font-weight: 600;
+}
+.btn:hover{
+  background-color: #1d1d3f;
+    color: #fff;
+    font-weight: 600;
+}
+.custom-card-container {
+  cursor: pointer;
+  position: relative;
+}
+
+/* The Image */
+.zoom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+/* The Dark Gradient Overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  z-index: 2;
+  transition: background 0.4s ease;
+}
+.badge-top {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #ffd600;
+  z-index: 3;
+  font-size: 13px;
+}
+
+/* Hover States */
+.custom-card-container:hover .zoom-img {
+  transform: scale(1.1);
+}
+
+.custom-card-container:hover .card-overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
+/* P-tag Reveal Logic */
+.hover-text {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.custom-card-container:hover .hover-text {
+  max-height: 100px;
+  opacity: 1;
+  margin-top: 10px;
+}
+.sticky-wrapper {
+  position: sticky;
+  top: 82px;              /* Stick to top */
+  z-index: 1000;
+  background-color: #fff;       /* Stay above cards/content */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* optional smooth shadow */
+}
+.sticky-booking {
+  position: sticky;
+  top: 100px;
+  transition: all 0.3s ease;
+}
+.timeline {
+  position: relative;
+  margin-left: 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #1d1d3f;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-circle {
+  width: 36px;
+  height: 36px;
+  background: #1d1d3f;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  width: 100%;
+}
+
+.hero-pack {
+  background: #1d1d3f;
+  color: white;
+}
+
+/* FILTER PANEL */
+.filter-panel {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+
+}
+
+/* SHOW when icon clicked */
+.filter-panel.show {
+  display: flex;
+
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 992px) {
+  .filter-panel {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

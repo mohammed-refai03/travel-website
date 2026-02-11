@@ -1,0 +1,195 @@
+.hero-section {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  /* Gradient overlay must come FIRST to be on top */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("/images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-img {
+  height: 450px;
+  width: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease-in-out,
+    width 0.3s ease-in-out;
+}
+
+
+/* Hero images */
+.hero-img {
+  width: 180px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px) {
+  .hero-img {
+    width: 160px;
+    height: 230px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 576px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 140px;
+    height: 200px;
+  }
+
+  .animate-left h3 {
+    font-size: 28px;
+  }
+
+  .animate-left p {
+    font-size: 15px;
+  }
+}
+
+
+/* Link animation to the scroll progress */
+/* Starts when image enters view */
+
+/* 3. The 3D Animation Keyframes */
+.animate-left {
+  animation: slideInLeft 1.5s ease-out forwards;
+}
+
+/* 3. Animation for the Images (Right Side) */
+.animate-right {
+  animation: slideInRight 1.5s ease-out forwards;
+}
+
+/* 4. Keyframes */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-img:hover {
+  transform: scale(
+    1.05
+  ); /* Slight scale is smoother than massive width change */
+  width: 200px; /* Reduced growth to prevent massive layout shifts */
+}
+
+
+
+.package-card{
+  min-width: 300px;
+  min-height: 400px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+  
+}
+.package-card:hover{
+  transition: all 0.3s ease;
+  border: 2px solid #FFD600;
+}
+
+
+.fade-item {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.9s ease;
+}
+
+.fade-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.whychoose{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.whychoose-card {
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+.whychoose-card:hover {
+  transform: translateY(-6px);
+   box-shadow: 0 0 5px #FFD600, 0 0 7px #FFD600;
+}
+
+.icon-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #eaf6ff;
+  color: #0c0c30ed;
+  font-size: 24px;
+}
+
+.testimonialCard{
+  min-width: 600px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.custom-pagination .swiper-pagination-bullet {
+  background: #cbd5e1;
+  opacity: 1;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background: #0d6efd;
+  width: 18px;
+  border-radius: 10px;
+}
+.value-card {
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+   /* box-shadow: 0 0 5px #0c0c30ed, 0 0 7px #0c0c30ed; */
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.value-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  /* background: #eaf6ff;
+  color: #0c0c30ed; */
+  background-color: #0c0c30ed;
+  color: #FFD600;
+  font-size: 24px;
+}

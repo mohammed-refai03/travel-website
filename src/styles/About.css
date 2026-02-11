@@ -1,0 +1,48 @@
+.team-card {
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.team-img {
+  height: 280px;
+  object-fit: cover;
+}
+
+/* Overlay */
+.social-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;                 /* hidden by default */
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+/* Show overlay on hover */
+.team-card:hover .social-overlay {
+  opacity: 1;
+}
+
+/* ICON FIX */
+.social-icon {
+  font-size: 20px;
+   background: #eaf6ff;
+  color: #0c0c30ed;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+
+
+/* Hover effect */
+.social-icon:hover {
+  background-color: #0c0c30ed;
+  color: #eaf6ff !important; 
+  transform: scale(1.1);
+}

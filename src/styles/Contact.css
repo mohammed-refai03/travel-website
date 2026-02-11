@@ -1,0 +1,33 @@
+.contact{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.contact-icon{
+    width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #eaf6ff;
+  color: #0c0c30ed;
+  font-size: 20px;
+}
+.input-field{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.input-field:focus{
+    border: 1px solid #0c0c30ed;
+    outline: none;
+}
+.input-field:hover{
+    transition: 0.3s ease-in-out;
+   transform: translateY(5px);
+}
+.input-label{
+    margin-bottom: 10px;
+}
+.msg{
+  height: 150px;
+  margin-bottom: 10px;
+}
